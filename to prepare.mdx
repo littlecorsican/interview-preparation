@@ -1,0 +1,55 @@
+does not mutate original array, creates new one
+
+map
+find
+reduce
+
+Some common mutating methods include:
+
+push: Adds one or more elements to the end of the array.
+pop: Removes the last element of the array.
+shift: Removes the first element of the array.
+unshift: Adds one or more elements to the beginning of the array.
+splice: Adds or removes elements at a specified index.
+sort: Sorts the elements of the array in place.
+reverse: Reverses the order of the elements in the array.
+fill: Fills all or part of the array with a static value.
+copyWithin: Copies a sequence of array elements to another position in the array.
+
+
+useMemo vs useCallback
+useMemo:
+
+Purpose: Caches the result of an expensive computation.
+Usage: Returns a memoized value. Recomputes the value only when one of its dependencies changes.
+Example:
+jsx
+Copy
+const computedValue = useMemo(() => {
+  return expensiveCalculation(a, b);
+}, [a, b]);
+useCallback:
+
+Purpose: Caches a function definition.
+Usage: Returns a memoized function that only changes if its dependencies change. This is useful when passing callbacks to child components that rely on reference equality (e.g., with React.memo).
+Example:
+jsx
+Copy
+const handleClick = useCallback(() => {
+  doSomething(a, b);
+}, [a, b]);
+In summary, use useMemo when you want to memoize a computed value, and use useCallback when you want to memoize a function.
+
+sorting
+people.sort((a, b) => a.age - b.age);
+
+
+different type of sorting
+
+To Do Today
+
+
+To Do long term
+
+Leetcode style question
+Subsequent
